@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><title>{{ action }} Study</title></head>
+<body>
+<h1>{{ action }} Study</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>{{ form.author.label }}<br>{{ form.author(size=50) }}</p>
+    <p>{{ form.year.label }}<br>{{ form.year(size=10) }}</p>
+    <p>{{ form.title.label }}<br>{{ form.title(rows=3, cols=60) }}</p>
+    <p>{{ form.abstract.label }}<br>{{ form.abstract(rows=3, cols=60) }}</p>
+    <p>{{ form.doi.label }}<br>{{ form.doi(size=50) }}</p>
+    <p>{{ form.study_id.label }}<br>{{ form.study_id(size=50) }}</p>
+    <p>{{ form.title_abstract_screening.label }}<br>{{ form.title_abstract_screening() }}</p>
+    <p>{{ form.pdf.label }}<br>{{ form.pdf(size=50) }}</p>
+    <p>{{ form.included.label }}<br>{{ form.included() }}</p>
+    <p>{{ form.reasons.label }}<br>{{ form.reasons(rows=3, cols=60) }}</p>
+    <p><input type="submit" value="{{ action }}"></p>
+</form>
+<a href="{{ url_for('index') }}">Back to list</a>
+</body>
+</html>
